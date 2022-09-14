@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=00000, initial-scale=1.0">
+    <link rel= "stylesheet" href="styles.css">
+    <title>My Portfolio</title>
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="images/my_portfolio_logo.png" alt="logo" class="logo">
+                <ul>
+                    <li><a href="">Home</a></li>
+                    <li><a href="">About</a></li>
+                    <li><a href="">Sevices</a></li>
+                    <li><a href="">Portfolio</a></li>
+                    <li><a href="">Contact</a></li>
+
+                </ul>
+            </nav>
+            <div class="header-text">
+                <p>Software Engineer</p>
+                <h1>Hi, I'm <span>Emmanuel</span> Igwe<br>From Nigeria </h1>
+            </div>
+        </div>
+    </div>
+
+    <!--About Section-->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/portfolio picture_2.png">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                         Totam quisquam dicta explicabo enim amet quam voluptas s
+                        it eius? Odit, est. Alias adipisci vero dolore sunt ea v
+                        ia masddv dudds sstsb styfoluptates aliquid fugiat tempore.
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Totam quisquam dicta explicabo enim amet quam voluptas s
+                       it eius? Odit, est. Alias adipisci vero dolore sunt ea v
+                       ia masddv dudds sstsb styfoluptates aliquid fugiat tempore.</p>
+
+                       <div class="tab-titles">
+                            <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                            <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                            <p class="tab-links" onclick="opentab('education')">Education</p>
+                       </div>
+                       <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>Front-end Web Development</span><br>Develop responsive Web applications</li>
+                            <li><span>Graphic Design</span><br>Design the overall layout of a company's brand identity, ebook design</li>
+                            <li><span>UI/UX</span><br>Designing Web/App interfaces</li>
+
+                        </ul>
+                       </div>
+                       <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>2022 - Current</span><br>Web Design Training at Hedger Solutions</li>
+                            <li><span>2022 - Current</span><br>Freelance at Upwork</li>
+                            <li><span>2022 - Current</span><br>Freelance at Upwork</li>
+
+                        </ul>
+                       </div>
+                       <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2018 - 2023</span><br>Electrical/Electronics Engineering at AE FUNAI</li>
+                            <li><span>2022 - 2023</span><br>Software Engineering at ALX-Holberton School</li>
+                            <li><span>2022</span><br>Responsive Design at Freecodecamp</li>
+                            
+
+                        </ul>
+                       </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+
+        function opentab(tabname) {
+            for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+            }
+        
+            for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+
+        }
+    </script>
+</body>
+</html>
