@@ -89,6 +89,7 @@ nav ul li a:hover::after {
 #about {
     padding: 80px 0;
     color: #ffff;
+    line-height: 20px;
 }
 
 .row {
